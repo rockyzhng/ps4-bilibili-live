@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # flush current rules
-iptables -t nat -F
-iptables -t mangle -F
+iptables -A SHADOWSOCKS -F
 
 # enable forwarding
 sysctl -w net.ipv4.ip_forward=1
